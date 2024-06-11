@@ -1,0 +1,69 @@
+.Student_Notice_Content {
+    border: solid, red, 4px;
+    margin: 20px;
+
+}
+
+.Section_holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(64, 196, 152, 0.2);
+    border: dotted,red,4px;
+    height: 300px;
+    margin: 20px;
+    align-items: center;
+
+}
+.Section_holder section{
+    margin: 5px;
+    flex:1;
+    height: 260px;
+    background-color: rgb(120, 232, 247);
+
+    
+}
+
+.Student_Notice_Content_Text{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color:blueviolet
+}
+.section_Title{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 8px;
+}
+table{
+    width: 98.5%;
+    border: solid, red, 4px;
+    height: 200px;
+    margin: 5px;
+}
+td{
+    border: solid 5px;
+}
+.Student_grid table tr.student.Photo td img {
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+
+}
+.student.Photo td {
+    text-align: center;
+    /* Center content horizontally */
+    vertical-align: middle;
+    /* Center content vertically */
+}
+.contactNo{
+    font-size: 16px;
+    height: 20px;
+    text-align: center;
+    
+}
+.contactNo td {
+    border: none;
+}
