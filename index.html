@@ -68,8 +68,9 @@
         </div>
         <div class="NewsBar">
             <p class="news">
-              <a class ="notce_link" href="https://drive.google.com/file/d/1YXcuHfnkxmlzKGCV5WHObV3BRucDu70B/view?usp=drive_link" style=" text-decoration: none; color:red;
-                "> MSc 2024 Batch Student List</a>
+            <a class="notice_link" onclick="openLink()" style="text-decoration: none; color: red;">
+                MSc 2024 Batch Student List
+            </a>
                 
             </p>
         </div>
@@ -80,19 +81,53 @@
             <div class="Section_holder">
                 <section class="Student_Info">
                     <p class="section_Title">
-                       Current CRs
+                       Current CR and ACR
                    </p>
                     <div class="Student_grid">
                         <table>
-                            <tr class="student Photo">
-                                <td><img src="Images/240901.jpg" alt="Image"></td>
-                                <td><img src="Images/240902.jpg" alt="image"></td>
-                                <td><img src="Images/240903.jpg" alt="image"></td>
-                                </tr>
-                            <tr class ="contactNo">
-                            <td> CR-Y1-T2:Irfan<br>01900444444</td>
-                            <td> ACR-Y1-T2: Swaraj<br>01900444444</td>
-                            <td> CR-Y2-T2:Sourav<br>01900444444</td>
+                            <tr class="student_Photo">
+                                <td>
+                                <div class="square-image">
+                                    <img src="Images/3.jpg" alt="Image">
+                                    <div class="text-overlay hidden">
+                                            <!--
+                                            CR<br>
+                                            Proshenjit Sarker<br>
+                                            MSc-240905<br>
+                                            Year: 1 Term: 2<br>
+                                            01928505242-->
+                                            Comming Soon
+                                    </div>
+                                </div>
+                                </td>
+                                <td>
+                                <div class="square-image">
+                                    <img src="Images/3.jpg" alt="Image">
+                                    <div class="text-overlay hidden">
+                                            <!--
+                                            CR<br>
+                                            Proshenjit Sarker<br>
+                                            MSc-240905<br>
+                                            Year: 1 Term: 2<br>
+                                            01928505242-->
+                                            Comming Soon
+                                    </div>
+                                </div>
+                                </td>
+                                <td>
+                                    <div class="square-image">
+                                        <img src="Images/3.jpg" alt="Image">
+                                        <div class="text-overlay hidden">
+                                            <!--
+                                            CR<br>
+                                            Proshenjit Sarker<br>
+                                            MSc-240905<br>
+                                            Year: 1 Term: 2<br>
+                                            01928505242-->
+                                            Comming Soon
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -125,22 +160,41 @@
 
     <script>
         // Drive Links
+    
         const TQ_linksArray = [
-            "https://drive.google.com/file/d/1Ra8UwCZI0mQkNnMYuYwrr9MrSSxD14XL/view?usp=drive_link",
-            "https://drive.google.com/file/d/1LhCFWGSN3GSyFO6f9K81lCIcjODAZU-a/view?usp=drive_link",
-            "https://drive.google.com/file/d/1EOsLGzSXO2AYIwLbFE8B0udewdArxX9v/view?usp=drive_link"
+            "https://drive.google.com/drive/folders/1DE5jVO3U5fQ2EScm8ovGmjdgJRG_PHcy?usp=drive_link",
+            "https://drive.google.com/drive/folders/1i2OeuzYFTWC6oojuCjmijOLmyA7tTzfs?usp=drive_link",
+            "https://drive.google.com/drive/folders/1fn4jkTxXSNh1gEhW8ogQ1hpfOxq6uugX?usp=drive_link",
+            "https://drive.google.com/drive/folders/1Gu6wAQwxoosdrJwH6iERV2fcmsBmeNr4?usp=drive_link",
+            "https://drive.google.com/drive/folders/1M-IbuUJkoDhDY2YnrbkuV4WN7k4r-0Ro?usp=drive_link",
+            "https://drive.google.com/drive/folders/19Uo8KVnGU4HqBxvVVxnfpgrh24xutQJX?usp=drive_link",
+            "https://drive.google.com/drive/folders/1J8JJFYGUmK_IeW1lGWE3exUub2IBO53D?usp=drive_link",
+            "https://drive.google.com/drive/folders/1gqQwjKiUFQusJbRrjKSA6IvfY9cWHjH2?usp=drive_link"
+
         ];
 
         const CTQ_linksArray = [
-            "https://drive.google.com/file/d/1Ra8UwCZI0mQkNnMYuYwrr9MrSSxD14XL/view?usp=drive_link",
-            "https://drive.google.com/file/d/1LhCFWGSN3GSyFO6f9K81lCIcjODAZU-a/view?usp=drive_link",
-            "https://drive.google.com/file/d/1EOsLGzSXO2AYIwLbFE8B0udewdArxX9v/view?usp=drive_link"
+            "https://drive.google.com/drive/folders/1gv4Lvscyq6G-Zv-fllVas8w6Hb1ApnH0?usp=drive_link",
+            "https://drive.google.com/drive/folders/1PRSfVqA8FrFZ1EsaA2EJ0BrEmSHh4caE?usp=drive_link",
+            "https://drive.google.com/drive/folders/1yoLoCf2woKHhMJhrHQkA8S2_1KUAvo_3?usp=drive_link",
+            "https://drive.google.com/drive/folders/1MNKolqq1p5haKQCuXSLtIUdlJBmnpkIq?usp=drive_link",
+            "https://drive.google.com/drive/folders/10wqORS3fC68y1PFXnEwaPtTj5E3b5teQ?usp=drive_link",
+            "https://drive.google.com/drive/folders/1F6yB2EO4nNzMDk7kUytNR4ptEiNeRxjU?usp=drive_link",
+            "https://drive.google.com/drive/folders/1O6MliGxsJ3tG4jCeocQoOATTtk6YrEtU?usp=drive_link",
+            "https://drive.google.com/drive/folders/1tDfKt2QURb2y5LdSv8z96Dy0jeT-VzWN?usp=drive_link"
+
         ];
 
         const ASS_linksArray = [
-            "https://drive.google.com/file/d/1Ra8UwCZI0mQkNnMYuYwrr9MrSSxD14XL/view?usp=drive_link",
-            "https://drive.google.com/file/d/1LhCFWGSN3GSyFO6f9K81lCIcjODAZU-a/view?usp=drive_link",
-            "https://drive.google.com/file/d/1EOsLGzSXO2AYIwLbFE8B0udewdArxX9v/view?usp=drive_link"
+            "https://drive.google.com/drive/folders/18lqRlYS93rMHWiB4tjRtfNsgBhmgUYV3?usp=drive_link",
+            "https://drive.google.com/drive/folders/1oWcJWf4GYmR94zvctBcr_Nj6K48zL0PJ?usp=drive_link",
+            "https://drive.google.com/drive/folders/1TaGIasIw23f6rAFYskrwMFRNBr4Yza9g?usp=drive_link",
+            "https://drive.google.com/drive/folders/1U3ym1n5zYiHQiKrkKRZn64ohA0f0LvmA?usp=drive_link",
+            "https://drive.google.com/drive/folders/1wI8yIl5y_f305KNUHEC24w371-qr2090?usp=drive_link",
+            "https://drive.google.com/drive/folders/1pWRs50qckZJ8Wt3l8IXMpj9UdWlq-5Z3?usp=drive_link",
+            "https://drive.google.com/drive/folders/1gHVWeE-9thchfzQDax79ihzr6f9cjKRj?usp=drive_link",
+            "https://drive.google.com/drive/folders/1cigLgMm_xKS29d9qO_SJcInm5kpukTmV?usp=drive_link"
+    
         ];
 
 
@@ -181,7 +235,6 @@
                 if (selectedValue <= linksArray.length) {
                     const selectedOptionText = selectElement.options[selectElement.selectedIndex].text;
                     const displayText = `${type}${selectedOptionText}`; // Include type before selectedOptionText
-
                     const link = document.createElement('a');
                     link.href = linksArray[selectedValue - 1];
                     link.target = '_blank'; // Open in a new tab
@@ -224,6 +277,27 @@
 
             
         });
+
+          function openLink() {
+                window.open("https://drive.google.com/file/d/1YXcuHfnkxmlzKGCV5WHObV3BRucDu70B/view?usp=drive_link", "_blank");
+            }
+
+
+            function flipImages() {
+                    const imageContainers = document.querySelectorAll('.square-image');
+                    imageContainers.forEach(container => {
+                        const images = container.querySelectorAll('img, .text-overlay');
+                        if (images[0].classList.contains('hidden')) {
+                            images[0].classList.remove('hidden');
+                            images[1].classList.add('hidden');
+                        } else {
+                            images[0].classList.add('hidden');
+                            images[1].classList.remove('hidden');
+                        }
+                    });
+                }
+
+                setInterval(flipImages, 3000); // Change image every 2 seconds
     </script>
 </body>
 
