@@ -1,0 +1,105 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.logo{
+    width: 220px;
+    height: 100px;
+    align-items: center;
+
+}
+
+.Logo_in_title{
+    width: 220px;
+    height: 100px;
+}
+.Logo_in_title:hover{
+    cursor: pointer;
+}
+.navigation_bar{
+    flex: 1;
+    margin-left: 30px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+
+}
+.ku_logo {
+    width: 100px;
+    height: 120px;
+    margin: 10px;
+}
+
+.ku_image {
+    width: 90px;
+    height: 120px;
+    border-radius: 0 0 60px 60px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ku_image:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.M,.Q,.C,.A{
+    height:60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    flex-shrink: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, font-size 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+
+.opt1,
+.opt2,.opt3,.opt4 {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 2px;
+    margin: 2px 2px 2px 0px;
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, font-size 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.opt1:hover,
+.opt2:hover,.opt3:hover,.opt4:hover {
+    cursor: pointer;
+    background-color: rgba(92, 87, 87, 0.1);
+    font-size: 20px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.opt1:active,
+.opt2:active,.opt3:active,.opt4:active {
+    background-color: rgba(92, 87, 87, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+.Option_Name_text{
+        font-size: 18px;
+        font-weight: bold;
+        padding: 4px 5px;
+        margin-right: 0px;
+        margin-left: 10px;
+        border: 2px solid transparent;
+        background-color: #ffffff;
+        border: none;
+        flex-shrink: 0;
+}

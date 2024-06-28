@@ -1,0 +1,35 @@
+.NewsBar{
+    margin: 5px 0 5px 0;
+    height: 30px;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+
+.news {
+    margin: 0;
+    padding: 0;
+    padding-top: 8px;
+    display: inline-block;
+    animation: scrollLeft 20s linear infinite;
+    color: red;
+    font-size: 20px;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(100%);
+        /* Start from the right */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* Scroll to the left */
+    }
+}
+.news:hover{
+    cursor: pointer;
+    color: blue;
+    animation-play-state: paused;
+}
