@@ -84,12 +84,7 @@
             </div>
         </div>
         <div class="NewsBar">
-            <p class="news">
-            <a class="notice_link" onclick="openLink()" style="text-decoration: none; color: red;">
-                MSc 2024 Batch Student List
-            </a>
-                
-            </p>
+            <p class="news" id="newsContainer"></p>
         </div>
         <div class="Student_Notice_Content">
             <p class="Student_Notice_Content_Text">
@@ -177,6 +172,28 @@
 
     <script>
         // Drive Links
+
+
+
+        const NoticelinksArray = [
+                {
+                    text: ":::: MSc 2024 Batch Student List :::: ",
+                    url: "https://drive.google.com/file/d/1YXcuHfnkxmlzKGCV5WHObV3BRucDu70B/view?usp=drive_link",
+                    color: "red"
+                },
+                {
+                    text: " :::: Course Offered (B-24 Y:1, T:2) ::::",
+                    url: "https://drive.google.com/file/d/1D6q27C-lgvY2vsI4pys1s5viNBgrhH0_/view?usp=drive_link",
+                    color: "rgb(65, 7, 236)"
+                }
+                /*,
+                {
+                    text: " :::: Scholarship Notice ::::",
+                    url: "https://ku.ac.bd/uploads/noticeboardfiles/%E0%A6%AC%E0%A6%BF%E0%A6%B6%E0%A7%8D%E0%A6%AC%E0%A6%AC%E0%A6%BF%E0%A6%A6%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%B2%E0%A6%AF%E0%A6%BC%20%E0%A6%AC%E0%A7%83%E0%A6%A4%E0%A7%8D%E0%A6%A4%E0%A6%BF%20%E0%A6%AC%E0%A6%BF%E0%A6%9C%E0%A7%8D%E0%A6%9E%E0%A6%AA%E0%A7%8D%E0%A6%A4%E0%A6%BF%20%202024_20240605_0001.pdf",
+                    color: "green"
+
+                }*/
+            ];
     
         const TQ_linksArray = [
             "https://drive.google.com/drive/folders/1nHSYptPBzuzV6IiB9xLIkrahH-Ft_Kyy?usp=drive_link", /* B:24 Y:1 T:1 */
@@ -360,12 +377,39 @@
 
             
         });
+            const newsContainer = document.getElementById('newsContainer');
 
-          function openLink() {
-                window.open("https://drive.google.com/file/d/1YXcuHfnkxmlzKGCV5WHObV3BRucDu70B/view?usp=drive_link", "_blank");
+            NoticelinksArray.forEach(link => {
+                const a = document.createElement('a');
+                a.className = 'notice_link';
+                a.textContent = link.text;
+                a.style.color = link.color;
+                a.onclick = () => window.open(link.url, "_blank");
+                newsContainer.appendChild(a);
+                newsContainer.appendChild(document.createTextNode(' ')); // Add space between links
+
+            });
+
+             // Calculate animation duration based on content length
+                const textLength = newsContainer.innerText.length;
+                const duration = textLength * 0.5; // Adjust multiplier as needed
+                // Apply the animation with the calculated duration
+                newsContainer.style.animation = `scrollLeft ${duration}s linear infinite`;
+                // Add keyframes dynamically
+                const styleSheet = document.styleSheets[0];
+                styleSheet.insertRule(`
+            @keyframes scrollLeft {
+                0% {
+                    transform: translateX(100%);
+                }
+                100% {
+                    transform: translateX(-100%);
+                }
             }
+        `, styleSheet.cssRules.length);
 
-                    function reloadPage() {
+        
+        function reloadPage() {
                             location.reload();
                         }
 
